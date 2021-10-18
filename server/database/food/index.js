@@ -7,13 +7,13 @@ const FoodSchema = new mongoose.Schema({
 	isEgg: {type: Boolean, required: true},
 	category: {type: String, required: true},
 	photos: {
-		types: mongoose.Types.ObjectId,
+		type: mongoose.Types.ObjectId,
 		ref: "Images"
 	},
 	price: {type: Number, default: 150, required: true},
 	addOns: [
 		{
-			types: mongoose.Types.ObjectId,
+			type: mongoose.Types.ObjectId,
 			ref: "Foods"
 		}
 	],
